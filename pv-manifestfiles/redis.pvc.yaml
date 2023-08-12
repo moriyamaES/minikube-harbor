@@ -1,0 +1,12 @@
+# redis.pvc.yaml
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: redis-claim
+spec:
+  accessModes:
+  - ReadWriteOnce
+  storageClassName: local-storage
+  resources:
+    requests:
+      storage: 1Gi
