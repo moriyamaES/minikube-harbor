@@ -77,11 +77,24 @@ ingress を使用不可にしている
 1. KubernetesのNodeのIPをExternal IPとして利用します。ServiceのManifest(service-nodeport.yaml)をデプロイします。
 
     ```
-    $ kubectl apply -f service-nodeport.yaml
+    # kubectl apply -f service-nodeport.yaml
     ```
 
 1. デプロイされたIngress Controllerを確認します。
 
     ```
-    kubectl get pod -n ingress-nginx
+    # kubectl get pod -n ingress-nginx
     ```
+
+    ```
+    # kubectl get svc -n ingress-nginx
+    ```
+
+1. HarborをデプロイするNamespaceを作成します。
+
+    ```
+    # kubectl create ns harbor
+    ```
+
+
+    ~~ # kubens harbor ~~ 
